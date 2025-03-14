@@ -1,56 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exemplo 2</title>
     <style>
-        *{
+        * {
             font-size: 16px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        }
-        body {
-            background-color: black;
-        }
-        .cabeçalho{
-            background-color: rgb(32, 151, 255);
-            border: 10px solid rgba(72, 236, 7, 0.767);
+        .cabecalho {
+            border: 1px solid #c7c5c5;
             height: 5rem;
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: start ;
+            /*box-shadow: .5rem .5rem .3rem .01rem #c7c5c5;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
             align-content: start;
         }
-        .item {
-    background-color: brown;
-    font-weight: bold;
-    padding: 1rem;
-    margin: 0.5rem;
-    width: 5rem;
-    height: 3rem;
-    border-radius: 0.5rem;
-    /*box-shadow: .5rem .5rem .3rem .01rem rgb(0, 0, 0);*/
 
+        .item {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 1rem;
+            margin: .1rem;
+            width: 5rem;
+            height: 3rem;
+            border-radius: .5rem;
         }
-        .logo{
+
+        .container {
+            display: flex;
+        }
+
+        .logo {
             flex-grow: 1;
-            
         }
-        .titulo{
+
+        .titulo {
             flex-grow: 14;
         }
-        .menu-burguer{
-            flex-grow: 3;
+
+        .menu-sandwich {
+            flex-grow: 1;
+        }
+
+        .menu-lateral {
+           /* border: 3px solid green;*/
+            width: 15rem;
+
+        }
+
+        .parte-principal {
+            border: 3px dashed blue;
+            flex-grow: 1;
+        }
+
+        .tile {
+            background-color: #c7c5c5;
+            color: blue;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.3rem;
+        }
+
+        .tile:hover {
+            background-color: blue;
+            color: aliceblue;
         }
     </style>
 </head>
+
 <body>
-    <div class="cabeçalho">
-        <div class="logo" class="item">item1</div>
-        <div class="titulo" class="item">item2</div>
-        <div class="menu-burguer"class="item"> item3 </div>
-        
-        
+    <div class="cabecalho">
+        <div class="item logo">Logo</div>
+        <div class="item titulo">Título</div>
+        <div class="item menu-sandwich">Menu</div>
+    </div>
+
+    <div class="container">
+        <nav class="menu-lateral">
+
+            <div class="tile"><a href="http://www.pucminas.br">Pucminas</a></div>
+    <div class="tile">Prime Video</div>
+    <div class="tile">google</div>
+    <div class="tile">mcdonald</div>
+
+        </nav>
+        <a href="http://www.pucminas.br"></a>
+        <main class="parte-principal">Parte principal</main>
+    </div>
+    
+
+
 </body>
+
 </html>
